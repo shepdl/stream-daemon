@@ -1,4 +1,4 @@
-stream-daemon
+Stream Daemon
 =============
 
 Hashtag-based twitter sampling program. Queries Twitter for tweets that mention certain hashtags, and stores the returned tweets.
