@@ -1,4 +1,4 @@
-CREATE DATABASE poirot;
+CREATE DATABASE stream_daemon;
 
 CREATE TABLE messages (
     id INTEGER NOT NULL PRIMARY KEY SERIAL,
@@ -22,37 +22,6 @@ CREATE TABLE tweets (
     to_user: VARCHAR(50),
     to_user_id: VARCHAR(50)
 ) INHERITS (messages);
-
-CREATE TABLE flickr_photos (
-    title: VARCHAR(255),
-    secret: VARCHAR(50),
-    server: VARCHAR(50),
-    owner_id: VARCHAR(50)
-) INHERITS (messages);
-
-CREATE TABLE facebook_statuses (
-    message TEXT,
-    updated_time TIMESTAMP WITH TIME ZONE,
-    comment_on_id VARCHAR(50),
-    comment_on_db_id INTEGER,
-    story TEXT,
-    picture VARCHAR(255) NULL,
-    link VARCHAR(255) NULL,
-    name VARCHAR(255),
-    icon VARCHAR(255)
-) INHERITS (messages);
-
-CREATE TABLE instagram_photos (
-    type: varchar(25),
-    filter: varchar(50),
-    tags: varchar(255), -- comma-delimited list from instagram
-    caption: varchar(255) NULL,
-    likes_count: integer,
-    user_name: varchar(255),
-    location: string(255) null,
-    urls: text
-) INHERITS (messages);
-
 
 CREATE TABLE service_users (
     name varchar(255),
