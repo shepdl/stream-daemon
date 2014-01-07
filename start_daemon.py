@@ -1,8 +1,3 @@
-# note: general dependencies
-# python-daemon
-# python-twitter
-# riak
-
 
 import daemon
 import lockfile
