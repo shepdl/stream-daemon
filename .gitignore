@@ -1,0 +1,7 @@
+*.swp
+*.pyc
+*~
+
+config.py
+
+riak-1.1.4
